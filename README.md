@@ -112,7 +112,7 @@ sentinel-triage/
 
 ```
 ╭─────────────────────────────────────────╮
-│ 🔍 SentinelTriage - Static File Analysis │
+│ SentinelTriage - Static File Analysis   │
 ╰─────────────────────────────────────────╯
 
 ┌──────────────────────────────────────┐
@@ -240,4 +240,3 @@ MIT License - см. файл LICENSE для деталей
 
 ---
 
-**Made with ❤️ for InfoSec Community**
