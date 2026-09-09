@@ -1,11 +1,11 @@
-# SentinelTriage
+# artifact-triage
 
 ![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 ![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey.svg)
 ![Purpose](https://img.shields.io/badge/Purpose-InfoSec%20%7C%20SOC%20%7C%20DFIR-red.svg)
 
-**SentinelTriage** — это автономный CLI-инструмент для быстрого статического экспресс-анализа подозрительных файлов и извлечения индикаторов компрометации (IOC). Разработан для специалистов по информационной безопасности, SOC-аналитиков и DFIR-команд.
+**artifact-triage** — это автономный CLI-инструмент для быстрого статического экспресс-анализа подозрительных файлов и извлечения индикаторов компрометации (IOC). Разработан для специалистов по информационной безопасности, SOC-аналитиков и DFIR-команд.
 
 ## Возможности
 
