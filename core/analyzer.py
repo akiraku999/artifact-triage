@@ -39,14 +39,27 @@ def calculate_entropy(data: bytes) -> float:
     return entropy
 
 
-def analyze_file_entropy(file_path: str, chunk_size: int = 4096) -> Tuple[float, bool]:
-    """Calculate file entropy and determine if it's suspicious (> 7.0)."""
+def analyze_file_entropy(file_path: str, chunk_size: int = 65536) -> Tuple[float, bool]:
+    """Calculate file entropy via streaming and determine if it's suspicious (> 7.0)."""
+    byte_counts = [0] * 256
+    total_bytes = 0
+    
     with open(file_path, 'rb') as f:
-        data = f.read()
+        while chunk := f.read(chunk_size):
+            total_bytes += len(chunk)
+            for b in chunk:
+                byte_counts[b] += 1
     
-    entropy = calculate_entropy(data)
+    if total_bytes == 0:
+        return 0.0, False
+    
+    entropy = 0.0
+    for count in byte_counts:
+        if count > 0:
+            probability = count / total_bytes
+            entropy -= probability * math.log2(probability)
+    
     is_suspicious = entropy > 7.0
-    
     return entropy, is_suspicious
 
 

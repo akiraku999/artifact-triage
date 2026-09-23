@@ -145,6 +145,7 @@ Temporary Items
 
 # Project specific
 test_malware.bin
+test_*.bin
 test_*.json
 !package.json
 !package-lock.json
